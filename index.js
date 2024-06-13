@@ -13,10 +13,6 @@ Project server is running on port ${PORT}
 \nHere's the URL - http://localhost:${PORT}/\n
 `));
 
-openBrowser(`http://localhost:${PORT}/`);
-
-
-
 // Interface Static
 const baseStaticPath = __dirname + `/interface/`;
 app.use(`/scripts`, express.static(baseStaticPath + `scripts`));
@@ -36,33 +32,6 @@ app.use(`/local`, local);
 const routes = require(`./routes/routes`);
 app.use(`/`, routes);
 
-
-// Other Function ===================================================
-function openBrowser(link) {
-
-    const { exec } = require('child_process');
-    const os = require('os');
-
-
-    let command = `open -a "Google Chrome" `;
-    
-    switch (os.platform) {
-        case `darwin`:
-             command = `open -a "Google Chrome" ` ;
-        case `win32`:
-            command = `start chrome `;
-        case `linux`:
-            command = `google-chrome `;
-    }
-
-    exec(command + link, (error, stdout, stderr) => {
-        if (error) {
-            console.error(`Error opening browser: ${error}`);
-            return;
-        }
-        console.log(`Browser opened successfully`);
-    });
-}
 
 
 

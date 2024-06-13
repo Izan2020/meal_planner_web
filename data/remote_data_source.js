@@ -4,7 +4,7 @@
 const apiKey = 'YOUR_API_KEY';
 const baseUrl = `https://api.spoonacular.com/recipes`;
 const apiPricing = `<a href="https://spoonacular.com/food-api/pricing" style="color: white;" target="_blank">Pricing Disini</a>`;
-const pathToHere = `<a href="vscode:./service.js#L4" style="color: white;">'serivce.js > apiKey'</a>`;
+const pathToHere = `<a href="vscode:${__dirname}/remote_data_source.js" style="color: white;">'serivce.js > apiKey'</a>`;
 
 
 const express = require(`express`);
