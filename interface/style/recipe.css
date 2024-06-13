@@ -16,8 +16,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 20px 10%;
+    width: 100%;    
+    padding: 52px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -224,6 +224,27 @@ body {
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 20px;
+}
+
+.header-fgc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    align-items: center;
+}
+
+.btn-history {
+    font-size: 38px;
+    padding: 12px;
+    color: #081b29;
+    transition: .3s;
+    border-radius: 12px;
+}
+
+.btn-history:hover {
+    background-color: #081b20;
+    
+    color: white;
 }
 
 #food-generator-container h1 {

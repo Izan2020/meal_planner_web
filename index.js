@@ -18,6 +18,10 @@ app.use(express.static('public'));
 const services = require(`./remote_data_source`);
 app.use(`/services`, services);
 
+// Local Data
+const local = require(`./local_data_source`);
+app.use(`/local`, local);
+
 // Initial Route
 const routes = require(`./routes`);
 app.get(`/`, (req, res) => res.sendFile(baseStaticPath + `/pages/main.html`));

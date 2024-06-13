@@ -16,7 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // OnChangeValue Calories Input
     var inputCalories = document.getElementsByName('calorie-target')[0];
     inputCalories.addEventListener('input', (event) => checkInputValue(event));
+    
 });
+
+
+
+
+
+
 
 // OnClick Button Generate
 var buttonGenerate = document.getElementById('button-generate');
@@ -82,13 +89,15 @@ function setAlertBoxMessage(message) {
                 `;
 }
 
+
+
 // ? Set Result list innerHTML with list of Items
 function itemRecipe(recipe) {
     return  `
-    <a id="recipe-card" href="https://www.google.com/search?q=${recipe.title}" target="_blank">
+    <a id="recipe-card" href="/recipe-detail?id=${recipe.id}&title=${recipe.title}" >
                     <img src="${recipe.image}" alt="">
                     <h1>
-                    ${recipe.title} <br> 
+                    ${recipe.title}<br> 
                     <ul>
                     ${recipe.nutrition.nutrients[0].amount}kcal
                     </ul>
