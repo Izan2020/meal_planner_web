@@ -31,11 +31,33 @@ pool.query(createTableQuery, (error, results, fields) => {
     console.error('Error creating table:', error);
     return;
   }
-  console.log('Table created successfully:', results);
+  console.log('Table created successfully =============');
 });
 
 // Body-Parser
 local.use(express.json());
+
+// Get History
+local.get(`/get-history`, (req, res) => {
+  pool.query(`SELECT * FROM history`, async (error, results, fields)=> {
+    if(error) {
+      console.log(`Error while getting Data - ${error.message}`);
+      return res.status(error.code).send(error.message);
+    }      
+    return res.send(results);
+  });
+})
+
+// Clear History
+local.get(`/clear-history`, (req, res) => {
+  pool.query(`DELETE FROM history`, async (error, result, fields)=> {
+    if(error) {
+      console.log(`Error Clearing Data - ${error.message}`);
+      return res.status(error.code).send(error.message);
+    }
+    return res.send(`History Cleared`);
+  });
+});
 
 // Insert History
 local.post(`/insert-history`, (req, res) => {
@@ -55,7 +77,5 @@ local.post(`/insert-history`, (req, res) => {
         return res.send(`Data Inserted`);
     });
 });
-
-
 
 module.exports = local;

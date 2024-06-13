@@ -6,6 +6,8 @@
             title,
             id
           } = req.query;
+
+        if(!title) return next();
           const pool = await fetch(`http://localhost:3001/local/insert-history`, {
             method: `POST`,
             headers: {

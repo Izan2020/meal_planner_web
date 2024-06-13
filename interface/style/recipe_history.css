@@ -9,7 +9,7 @@
 
 body {
     background: white;
-    color: #ededed;
+    color: black;
 }
 
 .header {
@@ -74,7 +74,27 @@ body {
 .header-fgc {
     display: flex;
     flex-direction: row;
-    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-clear {
+    font-size: 38px;
+    padding: 12px;
+    color: #f44336;
+    transition: .3s;
+    border-radius: 12px;
+}
+
+.btn-clear:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+
+.wrapper-title {
+    display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -93,4 +113,77 @@ body {
 .header-fgc i {
     font-size: 32px;
     color: #081b29;
+}
+
+hr {
+    margin-top: 22px;
+    margin-bottom: 12px;
+    background-color: purple;
+}
+
+/* LISTVIEW HISTORY */
+
+#listview-history {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+.item-history {
+    background-color: #ededed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 8px;
+    transition: .3s;
+}
+
+.item-history:hover {
+    background-color: darkgray;
+}
+
+.item-history h1 {
+    font-size: 18px;
+}
+
+.item-history h2 {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    /* Red */
+    color: white;
+    margin-top: 32px;
+
+    border-radius: 5px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+
+#loading {
+    margin-top: 12px;
+    color: #000000;
 }

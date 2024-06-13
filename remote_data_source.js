@@ -36,7 +36,7 @@ service.post(`/get-recipe`, async (req, res) => {
         return res.send(data);
     } catch (error) {
         console.log(`Client Exception : ${error}`)
-        return res.status(500).send(`Client Exception - ${error}`);
+        return res.status(500).send(`Client Exception - Check your Connection`);
     }
 });
 
@@ -65,7 +65,7 @@ service.get(`/get-ingredients`, async (req, res) => {
         return res.send(data);
     } catch (error) {
         console.log(`Client Exception : ${error}`)
-        return res.status(500).send(`Client Exception - ${error}`);
+        return res.status(500).send(`Client Exception - Check your Connection`);
     }
 });
 
