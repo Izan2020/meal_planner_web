@@ -18,8 +18,7 @@
               id: id,
             })
         });
-        if (!pool.ok) {
-        
+        if (!pool.ok) {        
             const errorText = await pool.text();
             console.log(errorText);
             return;
