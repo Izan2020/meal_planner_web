@@ -1,7 +1,7 @@
 // Setiap akun gratis (Spoonacular API) memiliki batasan request sebanyak 150 untuk sehari.
 // Berikut link untuk daftar akun Spoonacular 'https://spoonacular.com/food-api/console#Dashboard'
 
-const apiKey = '74f94846b3514d59b598a6fede5ed3bb';
+const apiKey = 'YOUR_API_KEY';
 const baseUrl = `https://api.spoonacular.com/recipes`;
 const apiPricing = `<a href="https://spoonacular.com/food-api/pricing" style="color: white;" target="_blank">Pricing Disini</a>`;
 const pathToHere = `<a href="vscode:./service.js#L4" style="color: white;">'serivce.js > apiKey'</a>`;
