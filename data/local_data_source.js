@@ -6,9 +6,12 @@ const mysql = require(`mysql`);
 const pool = mysql.createPool({
     connectionLimit: 10,
     host: 'localhost',
-    user: 'pma',
+    // Sesuaikan user
+    user: '',
+    // Sesuaikan password
     password: '',
-    database: 'meal_planner'
+    // Ganti ke database yang lu buat di XAMPP
+    database: ''
 });
 
 // Define the SQL statement to create a table
@@ -24,7 +27,7 @@ const createTableQuery = `
 // Execute the SQL query to create the table
 pool.query(createTableQuery, (error, results, fields) => {
   if (error) {
-    console.error('Error creating table:', error);
+    console.error('Error My SQL:', error.sqlMessage);
     return;
   }
   console.log('Table created successfully =============');
