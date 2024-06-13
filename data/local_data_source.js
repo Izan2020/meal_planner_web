@@ -1,17 +1,13 @@
 const express = require(`express`);
 const local = express.Router();
 
-
-
-
-
 // MySQL
 const mysql = require(`mysql`);
 const pool = mysql.createPool({
     connectionLimit: 10,
     host: 'localhost',
     user: 'pma',
-    // password: '',
+    password: '',
     database: 'meal_planner'
 });
 
