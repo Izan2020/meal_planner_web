@@ -15,15 +15,15 @@ app.get(`/test`, (req, res) => res.send(`TUH ADA`));
 
 // HTTP Services
 app.use(express.static('public'));
-const services = require(`./remote_data_source`);
+const services = require(`./data/remote_data_source`);
 app.use(`/services`, services);
 
 // Local Data
-const local = require(`./local_data_source`);
+const local = require(`./data/local_data_source`);
 app.use(`/local`, local);
 
 // Initial Route
-const routes = require(`./routes`);
+const routes = require(`./routes/routes`);
 app.get(`/`, (req, res) => res.sendFile(baseStaticPath + `/pages/main.html`));
 app.use(`/`, routes);
 
