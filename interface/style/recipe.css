@@ -20,9 +20,16 @@ body {
     padding: 52px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;    
     z-index: 100;
+    transition: .3s;
 }
+
+.header.sticky {
+    background-color: #081b20;
+    padding: 32px;
+}
+
 
 .logo {
     font-size: 25px;
@@ -36,7 +43,7 @@ body {
     color: #ededed;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 100px;
+    margin-left: 100px;    
     transition: .3s;
 }
 
@@ -270,7 +277,7 @@ body {
     flex-direction: row;
     margin-top: 12px;
     overflow: hidden;
-
+    border-radius: 12px;
 }
 
 #recipe-card:hover img {
@@ -299,8 +306,7 @@ body {
 }
 
 #recipe-card img {
-    display: flex;
-    border-radius: 12px;
+    display: flex;    
     height: 240px;
     width: 100%;
     object-fit: cover;

@@ -36,7 +36,12 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    
+    transition: .3s;
+}
+
+.header.sticky {
+    background-color: #081b20;
+    padding: 32px;
 }
 
 .logo {
@@ -173,6 +178,15 @@ body {
 
 .title-section {
     margin-top: 12px;
+}
+
+#text-summary {
+    color: gray;
+    font-weight: 300;
+}
+
+#text-summary a {
+    color: #1a5885;
 }
 
 .listview-ingredients {

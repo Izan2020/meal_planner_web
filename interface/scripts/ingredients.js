@@ -1,12 +1,9 @@
 
-
+// OnStart
 document.addEventListener(`DOMContentLoaded`, async () => {
-
-    
     const queryParams = new URLSearchParams(document.location.search);
     const recipeId = queryParams.get('id');    
     
-
     setLoading(true);    
     const result = await fetch(`/services/get-ingredients?recipeId=${recipeId}`,{
         method: `GET`,
@@ -19,15 +16,31 @@ document.addEventListener(`DOMContentLoaded`, async () => {
         const errorMessage = await result.text();
         return showMessage(errorMessage);
     }
-    setLoading(false);
-    const resultData = await result.json();
-    // const resultData = recipeInformation;
+    setLoading(false);   
+    checkHistory();
+    const resultData = await result.json();    
     showDetail(resultData);
     showIngredients(resultData);
-
 });
 
+// Sticky Navbar
+window.addEventListener('scroll', function(){
+    const header = document.querySelector('.header');    
+    header.classList.toggle('sticky', window.scrollY>0);    
+});
+
+
+
 // Functions ====================================================================================================
+
+function checkHistory() {
+    const btnBack = document.getElementById(`btn-back`);
+    if (history.length > 1) {
+        btnBack.style.display = `block`;
+    } else {
+        btnBack.style.display = `none`;
+    }
+}
 
 function setLoading(isLoading) {
     const containerIngredients = document.getElementById(`cont-igrd`);

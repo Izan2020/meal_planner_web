@@ -22,6 +22,12 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    transition: .3s;
+}
+
+.header.sticky {
+    background-color: #081b20;
+    padding: 32px;
 }
 
 .logo {

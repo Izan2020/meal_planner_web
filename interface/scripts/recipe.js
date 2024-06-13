@@ -20,9 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-
-
+// Sticky Navbar
+window.addEventListener('scroll', function(){
+    const header = document.querySelector('.header');    
+    header.classList.toggle('sticky', window.scrollY>0);    
+});
 
 
 // OnClick Button Generate
@@ -33,8 +35,8 @@ buttonGenerate.addEventListener('click', async () => {
     const caloriesTarget = document.getElementsByName('calorie-target')[0].value;    
     const resultList = document.getElementById('result-list');
 
-    if (diet == '' || allergy == '' || caloriesTarget == '') {                
-        return setAlertBoxMessage(`Fill the Blanks!`);
+    if (caloriesTarget == '') {                
+        return setAlertBoxMessage(`Insert Calories!`);
     }
 
     const formData = {
@@ -61,7 +63,7 @@ buttonGenerate.addEventListener('click', async () => {
 
     const resultData = await result.json();
     
-    if(resultData.length === 0) {
+    if(resultData.results.length === 0) {
         setLoading(false);
         return setAlertBoxMessage('No result Found.');
     }

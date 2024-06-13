@@ -9,10 +9,19 @@ document.addEventListener(`DOMContentLoaded`, async () => {
     const resultData = await response.json();    
     if(resultData.length === 0 ) {
         const listViewHistory = document.getElementById(`listview-history`);
+        const btnClear = document.getElementById(`btn-clear-h`);
+        btnClear.style.display = `none`;
         return listViewHistory.innerHTML = 'History is Empty.';
     }
     return showItems(resultData);
 });
+
+// Sticky Navbar
+window.addEventListener('scroll', function(){
+    const header = document.querySelector('.header');    
+    header.classList.toggle('sticky', window.scrollY>0);    
+});
+
 
 // OnTap Clear
 const btnClear = document.getElementById(`btn-clear-h`);
