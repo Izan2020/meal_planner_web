@@ -119,8 +119,7 @@ function setLoading(status) {
 
 // ? Set Check input value of maxium Calories
 function checkInputValue(event) {
-    const maxValue = 2200
-    // Maximal input Value
+    const maxValue = 2200    
     if (event.target.value > maxValue) {
         event.target.value = maxValue;
     }

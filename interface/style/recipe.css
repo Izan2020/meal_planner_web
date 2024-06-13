@@ -74,8 +74,8 @@ body {
     background-color: #081b29;
     color: white;
     font-weight: 600;
-    font-size: 18px;
-    transition: 300ms;
+    font-size: 18px;    
+    transition: .3s;    
     border-width: 0px;
     border-radius: 12px;
     border-color: #081b29;
