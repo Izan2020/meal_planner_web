@@ -7,6 +7,7 @@ const middleWare = require(`./middleware`);
 const baseStaticPath = `/Users/hamas/Documents/projects/meal-planner/interface/pages/`;
 router.get(`/recipe-history`, (req, res) => res.sendFile(baseStaticPath + `recipe_history.html`));
 router.get(`/recipe`, (req, res) => res.sendFile(baseStaticPath + `recipe.html`));
+router.get(`/`, (req, res) => res.sendFile(baseStaticPath + `main.html`));
 router.get('/recipe-detail', middleWare.ingredientsMiddleware  ,(req, res) => res.sendFile(baseStaticPath + 'ingredients.html'));
 
 
