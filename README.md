@@ -1,7 +1,7 @@
 ![foto](https://i.imgur.com/pxxE7Fa.png)
 
 
-[![Technologies](https://skillicons.dev/icons?i=express,nodejs,html,css)](https://skillicons.dev)
+[![Technologies](https://skillicons.dev/icons?i=mysql,express,nodejs,html,css)](https://skillicons.dev)
 
 # Meal Planner Website
 Meal Planner is an innovative web application designed to streamline meal planning based on personalized dietary needs and calorie targets. Leveraging Express JS for its robust back-end framework and Native JavaScript for a seamless front-end experience, Meal Planner offers users a user-friendly interface to effortlessly generate tailored meal plans.
