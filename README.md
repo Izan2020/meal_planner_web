@@ -18,7 +18,7 @@ Whether users are looking to lose weight, maintain a healthy lifestyle, or adher
 Used Express JS as Back-end and Routing
 
 ### 📷 Snapshots
-![foto](https://cdn.discordapp.com/attachments/1110006269571514438/1251876726208860201/image.png?ex=66702c8e&is=666edb0e&hm=4c2cbea927a52df5e612eaa178fd55ab900ec97dce414d430a92aa19a3e4830a&)
+![foto](https://media.discordapp.net/attachments/1110006269571514438/1251876726208860201/image.png?ex=668dd64e&is=668c84ce&hm=95c98378eef429e112d6030a4b59bead1729056f713bafc34481c2cc957ca4ac&=&format=webp&quality=lossless&width=1100&height=688)
 
 
 ### 😎 Application Features
